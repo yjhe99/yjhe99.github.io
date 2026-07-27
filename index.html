@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yujie (Janet) He</title>
+<meta name="description" content="Yujie (Janet) He — Ph.D. candidate in Biomedical Engineering & M.S. in Statistics at UT Austin. Aptamers, biosensors, and fluorescence." />
+
+<!-- ============================================================= -->
+<!--                                                               -->
+<!--   ✏️  EDIT YOUR CONTENT HERE  —  this is the only block you    -->
+<!--       normally need to touch. Change text, add/remove items   -->
+<!--       from the lists, and the page updates itself.            -->
+<!--                                                               -->
+<!--   Tips:                                                       -->
+<!--   • Every list is between [ ... ]. Copy a { ... } block,      -->
+<!--     paste it, and edit to add a new entry.                    -->
+<!--   • Keep the commas between items.                            -->
+<!--   • To hide a whole section, set its list to []  (empty).     -->
+<!--   • In publications, wrap YOUR name in **stars** to bold it.   -->
+<!--                                                               -->
+<!-- ============================================================= -->
+<script>
+const SITE = {
+
+  // ---- Basic identity -------------------------------------------------
+  name: "Yujie (Janet) He",
+  tagline: "Ph.D. Candidate in Biomedical Engineering · M.S. in Statistics",
+  affiliation: "University of Texas at Austin",
+  location: "Austin, TX, USA",
+
+  // Profile photo. Drop a file named "profile.jpg" next to index.html.
+  // If the file is missing, your initials are shown instead — no error.
+  photo: "profile.jpg",
+
+  // ---- Contact & links (leave a value "" to hide that link) -----------
+  links: {
+    email:    "yjhe@utexas.edu",
+    scholar:  "https://scholar.google.com/citations?hl=en&user=Qqz_obQAAAAJ",   // ← paste your Google Scholar URL here
+    linkedin: "https://www.linkedin.com/in/yujie-he-902168248/",   // ← paste your LinkedIn URL here
+    github:   "https://github.com/yjhe99",   // ← paste your GitHub profile URL here (optional)
+    // cv:       "cv.pdf"
+  },
+
+  // ---- About (each string is its own paragraph) -----------------------
+  about: [
+    "I am a Ph.D. candidate in Biomedical Engineering and a concurrent M.S. student in Statistics at the University of Texas at Austin, working with [Dr. Tim Yeh](https://sites.utexas.edu/yeh/). I build data-driven, high-throughput pipelines that turn next-generation sequencing into a high-throughput screening pipeline for functional nucleic acids.",
+    "My work sits at the interface of wet-lab biochemistry and computation: I performed high-throughput apatamer screening on repurposed [_Illumina_](https://www.illumina.com) flow cells as well as conventional SELEX to generate the data, and I build the analysis around them. I also integrate molecular dynamics (MD) simulations into the analysis to further explain the sequence–structure–function relationships. Currently, I am working on empowering the current repurposed NGS platform with AI for aptamer engineering.",
+    "Earlier, I built Monte Carlo and ODE-based models for diffusion analysis (for the iGEM project), identified lodging rice from UAV images through machine learning methods, and developed flexible electrochemical sensors (advised by [Dr. Xishan Guo](https://person.zju.edu.cn/en/xishanguo/0.html)) during my B.E. at Zhejiang University, China."
+  ],
+
+  // ---- Research interests (shown as bullets in About). Edit these. -----
+  interests: [
+    "Functional DNA/RNA sequence-structure-function relationship analysis and prediction with state-of-art technologies.",
+    "AI-assisted molecular tool design and development.",
+    "Sequencing technologies and sequencing data analysis."
+  ],
+
+  // ---- News / updates (newest first). Set to [] to hide the section. --
+  news: [
+    { date: "June 2026", text: "I received the Harry and Rubye Gaston Graduate Scholarship from the Cockrell School of Engineering, University of Texas at Austin." },
+    { date: "May 2026", text: "My co-authored paper \"Fluorogenic aptamer optimization on a massively parallel sequencing platform\" was published in ACS Sensors." },
+    { date: "April 2026", text: "I deposited my first-author manuscript \"A high-throughput platform for rapid adaptation of DNA aptamers to SARS-CoV-2 evolution\" to bioRxiv." },
+    { date: "Mar 2026", text: "I gave an oral presentation on \"High-throughput engineering of SARS-CoV-2 aptamers for adaptation to rapid viral evolution\" at the Pittcon 2026, San Antonio, TX." },
+    { date: "Jul 2025", text: "I presented a poster on \"High-throughout screening of RNA fluorogenic aptamers with distinct fluorescence lifetimes\" at Nucleosides, Nucleotides and Oligonucleotides (NNO) Gordon Research Conference (GRC) 2024, Newport, RI." },
+  ],
+
+  // ---- Education ------------------------------------------------------
+  education: [
+    { degree: "Ph.D. in Biomedical Engineering", school: "University of Texas at Austin", location: "Austin, USA", dates: "Aug 2022 – present" },
+    { degree: "M.S. in Statistics", school: "University of Texas at Austin", location: "Austin, USA", dates: "Aug 2023 – present",
+     //note: "Coursework: Design & analysis of experiments · Bayesian statistical methods · Maximum-likelihood statistics · Mathematical statistics · Applied stochastic processes" 
+     },
+    { degree: "B.E. in Agricultural Engineering", school: "Zhejiang University", location: "Hangzhou, China", dates: "Sept 2018 – June 2022" }
+  ],
+
+  // ---- Publications (newest first). Wrap your name in **stars**. ------
+  //   link:   paste the paper/DOI URL to make the title clickable ("" = none)
+  //   figure: filename of the paper's figure, e.g. "figures/pub1.png"
+  //           ("" = no figure). Put image files in a "figures" folder next
+  //           to index.html. The whole image is shown — nothing is cropped.
+  //   role:   YOUR specific contribution, shown as a small tag under the entry.
+  //           This is what makes the list read as "the computational person on
+  //           these teams." I filled the ones your CV supports; please verify
+  //           and fill the "" ones. Leave "" to show no tag.
+  publications: [
+    { authors: "**He, Y.**, Yang, Z., Kuo, Y.-A., Wu, Y., Fonseca-Albert, D., Le, K. K., Guo, J. G., Wang, Y., Nguyen, A.-T., Chen, Y.-I., et al.", title: "A High-Throughput Platform for Rapidly Adapting DNA Aptamers to SARS-CoV-2 Evolution.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.21.719937", figure: "figures/pub1.png", role: "Led the study — pool design; repurposed NGS selection workflow; in-solution characterization; MD simulation & data analysis; sensor design" },
+    { authors: "Kuo, Y.-A., Chen, Y.-I., Siraj, N., **He, Y.**, et al.", title: "Fluorogenic Aptamer Optimizations on a Massively Parallel Sequencing Platform.", venue: "ACS Sensors", year: "2026", link: "https://doi.org/10.1021/acssensors.5c04046", figure: "figures/pub6.png", role: "MD simulations & analysis; Fluorescence correlation spectroscopy" },
+    { authors: "Kim, S., Hong, S., Walker, J. N., **He, Y.**, Nguyen, A.-T., Chen, W.-R., Seifi, S., Chen, Y.-I., Kuo, Y.-A., Brodbelt, J. S., et al.", title: "Mechanistic insights into the color transformation of a non-FRET substrate for RNase activity detection.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.03.11.710959", figure: "figures/pub2.png", role: "Data analysis" },
+    { authors: "Chen, Y.-I., Kuo, Y.-A., **He, Y.**, Siraj, N., Batchelder-Schwab, E. J., Chang, Y.-J., Yonas, S., Wu, Y., Yang, Z., Nguyen, A.-T., et al.", title: "Lifetime-based multiplexed detection of viral RNA using fluorogenic aptamers.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.13.718069", figure: "figures/pub3.png", role: "MD simulations & analysis" },
+    { authors: "**He, Y.**, Chen, Y., Zhang, J., Zheng, Y. & Guo, X.", title: "A Flexible Ruthenium Oxide Electrodeposited SPCE Sensor for Stable Detection of Wide-Range pH Enhanced by Annealing.", venue: "2021 Transducers Conference", year: "2021", link: "https://ieeexplore.ieee.org/abstract/document/9495466", figure: "figures/pub10.png", role: "Sensor design, fabrication & characterization" },
+  ],
+
+  // ---- Patents (add  link: "..."  to make the title clickable) --------
+  patents: [
+    { authors: "Guo, X., Chen, Y. & **He, Y.**", title: "Electrochemical sensor for detecting capsaicin and application thereof.", venue: "CN Patent CN112,964,761 A", year: "Aug 2022", link: "https://patents.google.com/patent/CN112964761A/en?oq=CN112964761A" },
+    { authors: "Yeh, H.-C., Chen, Y.-I., Kuo, Y.-A., **He, Y.**, Nguyen, D.T., Hong, S., Nguyen, A.-T., Kim, S., Seifi, S.", title: "Optimized fluorogenic aptamers and methods of identification and use thereof.", venue: "WO Patent WO2025240876A1", year: "Nov 2025", link: "https://patents.google.com/patent/WO2025240876A1/en" }
+
+  ],
+
+  // ---- Presentations (newest first). type: "talk" or "poster" --------
+  //      (they're split into Talks and Posters subsections automatically).
+  presentations: [
+    { type: "talk",   title: "High-Throughput Engineering of SARS-CoV-2 Aptamers for Adaptation to Rapid Viral Evolution", venue: "Pittcon Conference + Expo, San Antonio, TX", year: "Mar 2026" },
+    { type: "poster", title: "High-throughput Screening of RNA Fluorogenic Aptamers with Distinct Fluorescence Lifetimes", venue: "Gordon Research Conference (NNO), Newport, RI", year: "Jul 2025" },
+    { type: "poster",   title: "Aptamer Screening against Viral Variants on a Massively Parallel Sequencing Platform", venue: "Pittcon Conference + Expo, Boston, MA", year: "Mar 2025" },
+    { type: "poster",   title: "Rapid Screening of SARS-CoV-2 Specific Aptamers with a Massively Parallel Repurposed NGS Platform", venue: "UT Graduate and Industry Networking (GAIN), Austin, TX", year: "Jan 2025" },
+    { type: "poster",   title: "SELEX-NGS Combinatorial Platform for Functional Nucleic Acids High-throughput Screening", venue: "Graduate Undergraduate Research Union (GURU) LINK, Austin, TX", year: "Nov 2024" },
+    { type: "poster", title: "A Flexible Ruthenium Oxide Electro-deposited SPCE Sensor for Stable Detection of Wide-Range pH", venue: "Transducers Conference, Online", year: "Jul 2021" }
+  ],
+
+  // ---- Teaching -------------------------------------------------------
+  teaching: [
+    { role: "Teaching Assistant — BME214L:Computational Fundamentals of BME Design", org: "UT Austin", dates: "Fall 2025",
+      note: "Led labs on 3D modeling, flow simulation, and circuits/PCB design." },
+    { role: "Guest Lecturer — BME354/382: Molecular Sensors and Nanodevices", org: "UT Austin", dates: "Nov 2024",
+      note: "Lectured on the history, principles, and future of first- to fourth-generation sequencing." },
+    { role: "Teaching Assistant — BME303: Introduction to Computing", org: "UT Austin", dates: "Spring 2024",
+      note: "Provided hands-on guidance in Python/C++ for BME freshmen during lab hours." },
+    { role: "Teaching Assistant — BME377: Micro- and Nanotechnologies for Sensors", org: "Universitat Pompeu Fabra, Barcelona", dates: "May 2023",
+      note: "Led homework sessions; created and graded assignments." }
+  ],
+
+  // ---- Mentoring ------------------------------------------------------
+  //   Format shown:  Name — Major ’YY · time · current role
+  //   Fill "role" with where they are now (e.g. "PhD student, MIT"); leave "" for blank.
+  mentoring: [
+    { name: "Kyle Le",             major: "Biology ’26",             time: "Jan 2023 – Nov 2024", role: "Now UT SouthWestern Medial School student" },
+    { name: "Jeffrey Guo",         major: "BME ’26", time: "Jul 2024 – May 2026",   role: "" },
+    { name: "Diego Albert-Fonseca", major: "BME ’27", time: "Sept 2024 – present",  role: "2026 mRNA Drug Substance PD Co-op at Sanofi" },
+    { name: "Heather Gan",         major: "Biology ’26",             time: "Oct 2024 – May 2026",   role: "Now McGovern Medical School student" },
+    { name: "Yui Zhu",         major: "BME ’27",             time: "June 2026 – present",   role: "" },
+  ],
+
+  // ---- Awards ---------------------------------------------------------
+  awards: [
+  { year: "June 2026",  text: "Harry and Rubye Gaston Graduate Scholarship from the Cockrell School of Engineering, UT Austin" },  
+  { year: "May 2025",  text: "Professional Development Award, UT Austin" },
+    { year: "2022–2023", text: "Cockrell School of Engineering Fellowship, UT Austin" },
+    { year: "Nov 2020",  text: "[iGEM 2020 Gold Award](https://2020.igem.org/Team:ZJU-China)" },
+    { year: "2018–2019", text: "First-class Scholarship, Zhejiang University" }
+  ],
+
+  // ---- Life (a separate page — NOT shown on the main page; it appears
+  //      only when someone clicks "Life" in the top menu). Edit freely.
+  //      Set life to null  ( life: null,)  to remove the page & menu link.
+  life: {
+    intro: "A little about me beyond the lab.",
+    paragraphs: [
+      "Coming soon.",
+      "And coming soon."
+    ],
+    // Optional photos. Put images in the "figures" folder and list them here,
+    // e.g. "figures/life1.jpg". They show in a grid, each fully visible.
+    photos: []
+  }
+};
+</script>
+<!-- =============  END OF CONTENT  —  styling & code below  ============ -->
+
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #23201c;
+    --muted: #6b6459;
+    --line: #e7e2d8;
+    --accent: #7a4b2b;        /* warm academic brown — change to any hex */
+    --accent-soft: #f0e7dd;
+    --maxw: 820px;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #201d16; --text: #ece7dc; --muted: #a49b8a;
+      --line: #35301f; --accent: #d9a679; --accent-soft: #2a2418;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--sans); font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Header / hero ---- */
+  header { padding: 64px 0 8px; }
+  .hero { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+  .avatar {
+    width: 132px; height: 132px; border-radius: 50%; flex: 0 0 auto;
+    object-fit: cover; background: var(--accent-soft); border: 1px solid var(--line);
+    display: grid; place-items: center; font-family: var(--serif);
+    font-size: 44px; color: var(--accent); font-weight: 600;
+  }
+  .hero h1 { font-family: var(--serif); font-size: 40px; line-height: 1.1; margin: 0 0 6px; font-weight: 600; letter-spacing: -0.01em; }
+  .hero .tagline { font-size: 18px; color: var(--text); margin: 0 0 2px; }
+  .hero .meta { color: var(--muted); font-size: 15px; margin: 0; }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .contact a {
+    width: 40px; height: 40px; display: grid; place-items: center;
+    border: 1px solid var(--line); border-radius: 50%;
+    background: var(--surface); color: var(--muted);
+    transition: border-color .15s, color .15s, background .15s, transform .15s;
+  }
+  .contact a:hover {
+    border-color: var(--accent); color: var(--accent);
+    background: var(--accent-soft); transform: translateY(-2px); text-decoration: none;
+  }
+  .contact a svg { width: 20px; height: 20px; display: block; }
+
+  /* ---- Sticky nav ---- */
+  nav {
+    position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(160%) blur(8px); border-bottom: 1px solid var(--line);
+    margin-top: 40px;
+  }
+  nav .wrap { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+  nav a { font-size: 14px; color: var(--muted); }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+
+  /* ---- Sections ---- */
+  section { padding: 40px 0 8px; }
+  h2 {
+    font-family: var(--serif); font-size: 15px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 20px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  section p { margin: 0 0 16px; }
+
+  .item { margin-bottom: 22px; }
+  .item:last-child { margin-bottom: 0; }
+  .row { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+  .row .title { font-weight: 600; }
+  .row .when { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .sub { color: var(--muted); font-size: 15px; }
+  .note { font-size: 15px; margin-top: 4px; }
+
+  /* ---- News ---- */
+  .news-item { display: flex; gap: 16px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+  .news-item:last-child { border-bottom: 0; }
+  .news-item .date { flex: 0 0 92px; color: var(--accent); font-size: 14px; font-weight: 600; }
+
+  /* ---- Publications ---- */
+  ol.pubs { margin: 0; padding: 0; list-style: none; counter-reset: pub; }
+  ol.pubs li {
+    position: relative; padding: 0 0 26px 40px; counter-increment: pub;
+    display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;
+  }
+  ol.pubs li::before {
+    content: counter(pub); position: absolute; left: 0; top: 1px;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft);
+    color: var(--accent); font-size: 13px; font-weight: 600; display: grid; place-items: center;
+  }
+  /* Figure column. Change 220px to make figures larger or smaller.
+     The whole image is always shown (width fits the column, height scales). */
+  .pub-fig { flex: 0 0 220px; max-width: 100%; }
+  .pub-fig img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+  }
+  .pub-body { flex: 1 1 300px; min-width: 0; }
+  .pub-title { font-weight: 600; }
+  .pub-venue { color: var(--muted); font-style: italic; }
+  .me { font-weight: 700; color: var(--text); }
+  /* "My contribution" tag — highlights your role on each paper */
+  .pub-role {
+    display: inline-block; margin-top: 7px; font-size: 12.5px; font-weight: 600;
+    color: var(--accent); background: var(--accent-soft);
+    border-radius: 6px; padding: 2px 9px; line-height: 1.5;
+  }
+  .pub-role::before { content: "My contribution — "; font-weight: 400; opacity: .8; }
+
+  /* ---- Projects inside research ---- */
+  .proj { margin: 10px 0 0; }
+  .proj .pname { font-weight: 600; font-size: 15px; }
+  .proj ul { margin: 4px 0 0; padding-left: 20px; }
+  .proj li { margin: 2px 0; font-size: 15px; }
+
+  /* ---- Skills / awards ---- */
+  .skill-group { margin-bottom: 16px; }
+  .skill-group h3 { font-size: 15px; margin: 0 0 8px; font-family: var(--sans); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 13.5px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; color: var(--text); }
+  .awards-list { margin: 0; padding: 0; list-style: none; }
+  .awards-list li { display: flex; gap: 16px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .awards-list li:last-child { border-bottom: 0; }
+  .awards-list .ayear { flex: 0 0 96px; color: var(--muted); font-size: 14px; }
+
+  /* ---- Sub-heading inside a combined section ---- */
+  .subhead {
+    font-family: var(--serif); font-weight: 600; font-size: 17px; color: var(--text);
+    margin: 26px 0 14px; padding-top: 14px; border-top: 1px solid var(--line);
+  }
+
+  /* ---- Research-interest bullets (About) ---- */
+  ul.interests { margin: 6px 0 0; padding-left: 20px; }
+  ul.interests li { margin: 6px 0; }
+  ul.interests li::marker { color: var(--accent); }
+
+  /* ---- Mentoring (name — major ’YY · time · role) ---- */
+  .mentee { padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  .mentee:last-child { border-bottom: 0; }
+  .mentee-name { font-weight: 600; }
+  .mentee-meta { color: var(--muted); font-size: 15px; }
+
+  /* ---- Active nav link + Life link ---- */
+  nav a.active { color: var(--accent); font-weight: 600; }
+  nav a.nav-life { margin-left: auto; }
+
+  /* ---- Standalone pages (Presentations, Teaching & Mentoring, Life) ---- */
+  .page > .wrap, .page section { padding-top: 8px; }
+  .life-intro { font-size: 18px; }
+  .life-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
+  .life-grid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; }
+
+  footer { color: var(--muted); font-size: 13px; text-align: center; padding: 56px 0 40px; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .hero h1 { font-size: 32px; }
+    header { padding-top: 40px; }
+    .row .when { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+
+<script>
+  // ---------- tiny helpers ----------
+  const $ = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+  const esc = s => String(s).replace(/[&<>]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[c]));
+  // Text formatting for any field:
+  //   **bold name**      → highlighted (your name in author lists)
+  //   [label](https://…) → a link
+  //   _italic_           → italic text
+  // (links are handled first so italics/bold never touch the URL or markup)
+  const inline = s => s
+    .replace(/\*\*(.+?)\*\*/g, '<span class="me">$1</span>')
+    .replace(/_(.+?)_/g, '<em>$1</em>');
+  const md = s => {
+    s = esc(s);
+    let out = "", last = 0, re = /\[(.+?)\]\((.+?)\)/g, m;
+    while ((m = re.exec(s))) {
+      out += inline(s.slice(last, m.index));
+      out += '<a href="' + m[2] + '" target="_blank" rel="noopener">' + inline(m[1]) + '</a>';
+      last = m.index + m[0].length;
+    }
+    return out + inline(s.slice(last));
+  };
+
+  const app = document.getElementById("app");
+  const sections = [];   // collect for nav
+  const pages = new Map();  // id -> element for standalone pages (hidden until clicked)
+  const addSection = (id, label, node) => { node.id = id; sections.push({ id, label }); return node; };
+
+  // ---------- header ----------
+  const header = $("header");
+  const hwrap = $("div", "wrap");
+  const hero = $("div", "hero");
+
+  // avatar with graceful fallback to initials
+  const initials = SITE.name.replace(/\(.*?\)/g, "").trim().split(/\s+/).map(w => w[0]).slice(0,2).join("");
+  const img = new Image();
+  const avatar = $("div", "avatar", esc(initials));
+  if (SITE.photo) {
+    img.src = SITE.photo; img.alt = SITE.name; img.className = "avatar";
+    img.onload = () => avatar.replaceWith(img);
+  }
+  hero.appendChild(avatar);
+
+  const hinfo = $("div");
+  hinfo.appendChild($("h1", null, esc(SITE.name)));
+  hinfo.appendChild($("p", "tagline", esc(SITE.tagline)));
+  hinfo.appendChild($("p", "meta", [SITE.affiliation, SITE.location].filter(Boolean).map(esc).join(" · ")));
+
+  // Icons (inline SVG, inherit the link color). To add a new link type,
+  // add its URL in the SITE.links block above and an icon+label line here.
+  const ICONS = {
+    email:    '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13A1.5 1.5 0 0 1 20.5 20h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 5.6L19.8 6H4.2ZM20 7.4l-7.4 5.3a1 1 0 0 1-1.2 0L4 7.4V18h16V7.4Z"/></svg>',
+    scholar:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 8l11 6 9-4.9V16h2V8L12 2Z"/><path fill="currentColor" d="M6 12.4v3.1c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.1l-6 3.3-6-3.3Z"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>',
+    github:   '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>',
+    cv:       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v16H6V2Zm7 1.5V7h3.5L13 3.5ZM8 11h8v1.5H8V11Zm0 3h8v1.5H8V14Zm0 3h5v1.5H8V17Z"/></svg>'
+  };
+  const L = SITE.links, contact = $("div", "contact");
+  const linkDefs = [
+    ["email",    L.email ? "mailto:" + L.email : "", "Email"],
+    ["scholar",  L.scholar,  "Google Scholar"],
+    ["linkedin", L.linkedin, "LinkedIn"],
+    ["github",   L.github,   "GitHub"],
+    ["cv",       L.cv,       "CV (PDF)"]
+  ];
+  linkDefs.forEach(([key, href, label]) => {
+    if (!href) return;
+    const a = $("a", null, ICONS[key] || esc(label));
+    a.href = href; a.title = label; a.setAttribute("aria-label", label);
+    if (key !== "email") { a.target = "_blank"; a.rel = "noopener"; }
+    contact.appendChild(a);
+  });
+  hinfo.appendChild(contact);
+  hero.appendChild(hinfo);
+  hwrap.appendChild(hero);
+  header.appendChild(hwrap);
+  app.appendChild(header);
+
+  // ---------- nav (built after sections are known) ----------
+  const nav = $("nav"); const navWrap = $("div", "wrap"); nav.appendChild(navWrap); app.appendChild(nav);
+
+  // Academic sections live in this container so the "Life" page can hide them.
+  const academic = $("div"); academic.id = "academic"; app.appendChild(academic);
+
+  // ---------- section builder ----------
+  // opts.standalone: true  → the section is its OWN page, hidden from the main
+  // page and shown only when its menu link is clicked (like the Life page).
+  const makeSection = (id, label, buildBody, opts) => {
+    opts = opts || {};
+    const body = SITE[id];
+    // skip empty sections automatically
+    if (Array.isArray(body) && body.length === 0) return;
+    const s = $("section"); const w = $("div", "wrap");
+    w.appendChild($("h2", null, esc(label)));
+    buildBody(w);
+    s.appendChild(w);
+    addSection(id, label, s);
+    if (opts.standalone) {
+      s.classList.add("page"); s.style.display = "none";
+      app.appendChild(s); pages.set(id, s);
+    } else {
+      academic.appendChild(s);
+    }
+  };
+
+  // About
+  makeSection("about", "About", w => {
+    SITE.about.forEach(p => w.appendChild($("p", null, md(p))));
+    if (SITE.interests && SITE.interests.length) {
+      w.appendChild($("div", "subhead", "Research interests"));
+      const ul = $("ul", "interests");
+      SITE.interests.forEach(it => ul.appendChild($("li", null, md(it))));
+      w.appendChild(ul);
+    }
+  });
+
+  // News
+  makeSection("news", "News", w => SITE.news.forEach(n => {
+    const row = $("div", "news-item");
+    row.appendChild($("div", "date", esc(n.date)));
+    row.appendChild($("div", null, esc(n.text)));
+    w.appendChild(row);
+  }));
+
+  // Selected Publications & Patents (combined)
+  makeSection("publications", "Selected Publications & Patents", w => {
+    const ol = $("ol", "pubs");
+    SITE.publications.forEach(p => {
+      const li = $("li");
+      // optional figure (whole image shown; if the file is missing it's hidden)
+      if (p.figure) {
+        const fig = $("div", "pub-fig");
+        const im = new Image();
+        im.src = p.figure; im.alt = p.title; im.loading = "lazy";
+        im.onerror = () => fig.remove();
+        if (p.link) {
+          const a = $("a"); a.href = p.link; a.target = "_blank"; a.rel = "noopener";
+          a.appendChild(im); fig.appendChild(a);
+        } else { fig.appendChild(im); }
+        li.appendChild(fig);
+      }
+      const body = $("div", "pub-body");
+      const t = p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${md(p.title)}</a>` : md(p.title);
+      const roleTag = p.role ? `<br><span class="pub-role">${esc(p.role)}</span>` : "";
+      body.innerHTML = `<span class="pub-title">${t}</span><br>${md(p.authors)}<br><span class="pub-venue">${md(p.venue)} · ${esc(p.year)}</span>${roleTag}`;
+      li.appendChild(body);
+      ol.appendChild(li);
+    });
+    w.appendChild(ol);
+
+    if (SITE.patents && SITE.patents.length) {
+      w.appendChild($("div", "subhead", "Patents"));
+      SITE.patents.forEach(p => {
+        const d = $("div", "item");
+        const t = p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${md(p.title)}</a>` : md(p.title);
+        d.innerHTML = `<span class="pub-title">${t}</span><br>${md(p.authors)}<br><span class="pub-venue">${md(p.venue)} · ${esc(p.year)}</span>`;
+        w.appendChild(d);
+      });
+    }
+  });
+
+  // Presentations — split into Talks and Posters (standalone page)
+  makeSection("presentations", "Presentations", w => {
+    [["Talks", "talk"], ["Posters", "poster"]].forEach(([label, type]) => {
+      const items = SITE.presentations.filter(p => (p.type || "talk") === type);
+      if (!items.length) return;
+      w.appendChild($("div", "subhead", label));
+      items.forEach(p => {
+        const d = $("div", "item");
+        const row = $("div", "row");
+        row.appendChild($("div", "title", esc(p.title)));
+        row.appendChild($("div", "when", esc(p.year)));
+        d.appendChild(row);
+        d.appendChild($("div", "sub", esc(p.venue)));
+        w.appendChild(d);
+      });
+    });
+  }, { standalone: true });
+
+  // Teaching & Mentoring (combined)
+  makeSection("teaching", "Teaching & Mentoring", w => {
+    SITE.teaching.forEach(t => {
+      const d = $("div", "item");
+      const row = $("div", "row");
+      row.appendChild($("div", "title", esc(t.role)));
+      row.appendChild($("div", "when", esc(t.dates)));
+      d.appendChild(row);
+      d.appendChild($("div", "sub", esc(t.org)));
+      if (t.note) d.appendChild($("div", "note", esc(t.note)));
+      w.appendChild(d);
+    });
+
+    if (SITE.mentoring && SITE.mentoring.length) {
+      w.appendChild($("div", "subhead", "Mentoring"));
+      SITE.mentoring.forEach(m => {
+        // Name — Major ’YY · time · current role   (blank parts are skipped)
+        const meta = [m.major, m.time, m.role].filter(Boolean).map(esc).join(" · ");
+        const d = $("div", "mentee");
+        d.innerHTML = `<span class="mentee-name">${esc(m.name)}</span>` +
+                      (meta ? ` <span class="mentee-meta">— ${meta}</span>` : "");
+        w.appendChild(d);
+      });
+    }
+  }, { standalone: true });
+
+  // Awards
+  makeSection("awards", "Awards & Honors", w => {
+    const ul = $("ul", "awards-list");
+    SITE.awards.forEach(a => {
+      const li = $("li");
+      li.appendChild($("div", "ayear", esc(a.year)));
+      li.appendChild($("div", null, md(a.text)));
+      ul.appendChild(li);
+    });
+    w.appendChild(ul);
+  });
+
+  // ---------- Life page (hidden until the "Life" menu link is clicked) ----------
+  let lifeView = null;
+  if (SITE.life) {
+    lifeView = $("div", "page"); lifeView.id = "life"; lifeView.style.display = "none";
+    const lw = $("div", "wrap");
+    lw.appendChild($("h2", null, "Life"));
+    if (SITE.life.intro) lw.appendChild($("p", "life-intro", md(SITE.life.intro)));
+    (SITE.life.paragraphs || []).forEach(p => lw.appendChild($("p", null, md(p))));
+    const photos = SITE.life.photos || [];
+    if (photos.length) {
+      const grid = $("div", "life-grid");
+      photos.forEach(src => {
+        const im = new Image(); im.src = src; im.alt = ""; im.loading = "lazy";
+        im.onerror = () => im.remove();
+        grid.appendChild(im);
+      });
+      lw.appendChild(grid);
+    }
+    lifeView.appendChild(lw);
+    app.appendChild(lifeView);
+    pages.set("life", lifeView);
+  }
+
+  // ---------- fill nav ----------
+  // Home sections scroll in place; standalone pages (in `pages`) swap the view.
+  sections.forEach(s => {
+    const a = $("a", null, esc(s.label)); a.href = "#" + s.id;
+    navWrap.appendChild(a);
+  });
+  if (lifeView) {
+    const a = $("a", "nav-life", "Life"); a.href = "#life";
+    navWrap.appendChild(a);
+  }
+
+  // ---------- footer ----------
+  const footer = $("footer");
+  footer.appendChild($("div", "wrap", `© <span id="yr"></span> ${esc(SITE.name)} · Built with plain HTML, hosted on GitHub Pages.`));
+  app.appendChild(footer);
+  const yrEl = document.getElementById("yr"); if (yrEl) yrEl.textContent = new Date().getFullYear();
+
+  document.title = SITE.name;
+
+  // ---------- router ----------
+  // A hash matching a standalone page (Presentations, Teaching & Mentoring,
+  // Life) shows that page alone; any other hash shows the main page and
+  // scrolls to the matching section.
+  function route() {
+    const h = location.hash.replace(/^#/, "");
+    const onPage = pages.has(h);
+    academic.style.display = onPage ? "none" : "";
+    pages.forEach((el, id) => { el.style.display = (id === h) ? "" : "none"; });
+    navWrap.querySelectorAll("a").forEach(a =>
+      a.classList.toggle("active", a.getAttribute("href") === "#" + h));
+    if (onPage) window.scrollTo(0, 0);
+    else if (h && document.getElementById(h)) document.getElementById(h).scrollIntoView();
+  }
+  window.addEventListener("hashchange", route);
+  route();
+</script>
+</body>
+</html>

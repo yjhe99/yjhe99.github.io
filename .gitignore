@@ -1,0 +1,17 @@
+# Private / local files — kept OUT of the public site
+
+# industrial résumé (private)
+020726_terray.pdf
+
+# CV — currently unlinked; delete this line to publish it
+cv.pdf
+
+# 14 MB original photo (profile.jpg is the web version)
+profile_original.jpg
+
+# local backup of the site
+backup.html
+
+# local editor/tooling config
+.claude/
+.DS_Store
