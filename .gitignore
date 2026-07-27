@@ -15,3 +15,9 @@ backup.html
 # local editor/tooling config
 .claude/
 .DS_Store
+
+# notes for Claude Code (local only)
+CLAUDE.md
+
+# personal editing guide — keep local, not on the public repo
+README.md
