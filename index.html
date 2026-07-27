@@ -584,7 +584,7 @@ const SITE = {
 
   // ---------- footer ----------
   const footer = $("footer");
-  footer.appendChild($("div", "wrap", `© <span id="yr"></span> ${esc(SITE.name)} · Built with plain HTML, hosted on GitHub Pages.`));
+  footer.appendChild($("div", "wrap", `© <span id="yr"></span> ${esc(SITE.name)}`));
   app.appendChild(footer);
   const yrEl = document.getElementById("yr"); if (yrEl) yrEl.textContent = new Date().getFullYear();
 
