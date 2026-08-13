@@ -58,9 +58,10 @@ const SITE = {
 
   // ---- News / updates (newest first). Set to [] to hide the section. --
   news: [
+    { date: "Aug 2026", text: "My first-authored paper \"A high-throughput platform for rapid adaptation of DNA aptamers to SARS-CoV-2 evolution\" was accepted by _ACS Nano_." },
     { date: "June 2026", text: "I received the Harry and Rubye Gaston Graduate Scholarship from the Cockrell School of Engineering, University of Texas at Austin." },
-    { date: "May 2026", text: "My co-authored paper \"Fluorogenic aptamer optimization on a massively parallel sequencing platform\" was published in ACS Sensors." },
-    { date: "April 2026", text: "I deposited my first-author manuscript \"A high-throughput platform for rapid adaptation of DNA aptamers to SARS-CoV-2 evolution\" to bioRxiv." },
+    { date: "May 2026", text: "My co-authored paper \"Fluorogenic aptamer optimization on a massively parallel sequencing platform\" was published in _ACS Sensors_." },
+    { date: "April 2026", text: "I deposited my first-authored manuscript \"A high-throughput platform for rapid adaptation of DNA aptamers to SARS-CoV-2 evolution\" to _bioRxiv_." },
     { date: "Mar 2026", text: "I gave an oral presentation on \"High-throughput engineering of SARS-CoV-2 aptamers for adaptation to rapid viral evolution\" at the Pittcon 2026, San Antonio, TX." },
     { date: "Jul 2025", text: "I presented a poster on \"High-throughout screening of RNA fluorogenic aptamers with distinct fluorescence lifetimes\" at Nucleosides, Nucleotides and Oligonucleotides (NNO) Gordon Research Conference (GRC) 2024, Newport, RI." },
   ],
@@ -79,16 +80,19 @@ const SITE = {
   //   figure: filename of the paper's figure, e.g. "figures/pub1.png"
   //           ("" = no figure). Put image files in a "figures" folder next
   //           to index.html. The whole image is shown — nothing is cropped.
+  //   figw:   display width in px. Tuned per figure so the TEXT inside every
+  //           figure looks about the same size (bigger px = larger figure).
+  //           Narrower figures are centered. Omit to default to 640.
   //   role:   YOUR specific contribution, shown as a small tag under the entry.
   //           This is what makes the list read as "the computational person on
   //           these teams." I filled the ones your CV supports; please verify
   //           and fill the "" ones. Leave "" to show no tag.
   publications: [
-    { authors: "**He, Y.**, Yang, Z., Kuo, Y.-A., Wu, Y., Fonseca-Albert, D., Le, K. K., Guo, J. G., Wang, Y., Nguyen, A.-T., Chen, Y.-I., et al.", title: "A High-Throughput Platform for Rapidly Adapting DNA Aptamers to SARS-CoV-2 Evolution.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.21.719937", figure: "figures/pub1.png", role: "Led the study — pool design; repurposed NGS selection workflow; in-solution characterization; MD simulation & data analysis; sensor design" },
-    { authors: "Kuo, Y.-A., Chen, Y.-I., Siraj, N., **He, Y.**, et al.", title: "Fluorogenic Aptamer Optimizations on a Massively Parallel Sequencing Platform.", venue: "ACS Sensors", year: "2026", link: "https://doi.org/10.1021/acssensors.5c04046", figure: "figures/pub6.png", role: "MD simulations & analysis; Fluorescence correlation spectroscopy" },
-    { authors: "Kim, S., Hong, S., Walker, J. N., **He, Y.**, Nguyen, A.-T., Chen, W.-R., Seifi, S., Chen, Y.-I., Kuo, Y.-A., Brodbelt, J. S., et al.", title: "Mechanistic insights into the color transformation of a non-FRET substrate for RNase activity detection.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.03.11.710959", figure: "figures/pub2.png", role: "Data analysis" },
-    { authors: "Chen, Y.-I., Kuo, Y.-A., **He, Y.**, Siraj, N., Batchelder-Schwab, E. J., Chang, Y.-J., Yonas, S., Wu, Y., Yang, Z., Nguyen, A.-T., et al.", title: "Lifetime-based multiplexed detection of viral RNA using fluorogenic aptamers.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.13.718069", figure: "figures/pub3.png", role: "MD simulations & analysis" },
-    { authors: "**He, Y.**, Chen, Y., Zhang, J., Zheng, Y. & Guo, X.", title: "A Flexible Ruthenium Oxide Electrodeposited SPCE Sensor for Stable Detection of Wide-Range pH Enhanced by Annealing.", venue: "2021 Transducers Conference", year: "2021", link: "https://ieeexplore.ieee.org/abstract/document/9495466", figure: "figures/pub10.png", role: "Sensor design, fabrication & characterization" },
+    { authors: "**He, Y.**, Yang, Z., Kuo, Y.-A., Wu, Y., Fonseca-Albert, D., Le, K. K., Guo, J. G., Wang, Y., Nguyen, A.-T., Chen, Y.-I., et al.", title: "A High-Throughput Platform for Rapidly Adapting DNA Aptamers to SARS-CoV-2 Evolution.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.21.719937", figure: "figures/pub1.png", figw: 340, role: "Led the study — pool design; repurposed NGS selection workflow; in-solution characterization; MD simulation & data analysis; sensor design" },
+    { authors: "Kuo, Y.-A., Chen, Y.-I., Siraj, N., **He, Y.**, et al.", title: "Fluorogenic Aptamer Optimizations on a Massively Parallel Sequencing Platform.", venue: "ACS Sensors", year: "2026", link: "https://doi.org/10.1021/acssensors.5c04046", figure: "figures/pub2.png", figw: 495, role: "MD simulations & analysis; Fluorescence correlation spectroscopy" },
+    { authors: "Kim, S., Hong, S., Walker, J. N., **He, Y.**, Nguyen, A.-T., Chen, W.-R., Seifi, S., Chen, Y.-I., Kuo, Y.-A., Brodbelt, J. S., et al.", title: "Mechanistic insights into the color transformation of a non-FRET substrate for RNase activity detection.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.03.11.710959", figure: "figures/pub3.png", figw: 720, role: "Data analysis" },
+    { authors: "Chen, Y.-I., Kuo, Y.-A., **He, Y.**, Siraj, N., Batchelder-Schwab, E. J., Chang, Y.-J., Yonas, S., Wu, Y., Yang, Z., Nguyen, A.-T., et al.", title: "Lifetime-based multiplexed detection of viral RNA using fluorogenic aptamers.", venue: "bioRxiv", year: "2026", link: "https://doi.org/10.64898/2026.04.13.718069", figure: "figures/pub4.png", figw: 605, role: "MD simulations & analysis" },
+    { authors: "**He, Y.**, Chen, Y., Zhang, J., Zheng, Y. & Guo, X.", title: "A Flexible Ruthenium Oxide Electrodeposited SPCE Sensor for Stable Detection of Wide-Range pH Enhanced by Annealing.", venue: "2021 Transducers Conference", year: "2021", link: "https://ieeexplore.ieee.org/abstract/document/9495466", figure: "figures/pub5.png", figw: 640, role: "Sensor design, fabrication & characterization" },
   ],
 
   // ---- Patents (add  link: "..."  to make the title clickable) --------
@@ -244,26 +248,33 @@ const SITE = {
   .news-item { display: flex; gap: 16px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
   .news-item:last-child { border-bottom: 0; }
   .news-item .date { flex: 0 0 92px; color: var(--accent); font-size: 14px; font-weight: 600; }
+  .news-extra { display: none; }   /* hidden until "Show more" is clicked */
+  .more-btn {
+    margin-top: 12px; padding: 5px 14px; font: inherit; font-size: 14px; font-weight: 600;
+    color: var(--accent); background: none; border: 1px solid var(--line);
+    border-radius: 999px; cursor: pointer; transition: border-color .15s, background .15s;
+  }
+  .more-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
 
   /* ---- Publications ---- */
   ol.pubs { margin: 0; padding: 0; list-style: none; counter-reset: pub; }
   ol.pubs li {
     position: relative; padding: 0 0 26px 40px; counter-increment: pub;
-    display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;
   }
   ol.pubs li::before {
     content: counter(pub); position: absolute; left: 0; top: 1px;
     width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft);
     color: var(--accent); font-size: 13px; font-weight: 600; display: grid; place-items: center;
   }
-  /* Figure column. Change 220px to make figures larger or smaller.
-     The whole image is always shown (width fits the column, height scales). */
-  .pub-fig { flex: 0 0 220px; max-width: 100%; }
+  /* Figure sits BELOW the citation, centered. Each figure's on-screen width
+     is set per-paper via its `figw` value (px) so the TEXT looks the same
+     size across figures; narrower ones are centered. */
+  .pub-fig { margin-top: 12px; text-align: center; }
+  .pub-fig a { display: inline-block; }
   .pub-fig img {
-    width: 100%; height: auto; display: block;
+    max-width: 100%; height: auto; vertical-align: middle;
     border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
   }
-  .pub-body { flex: 1 1 300px; min-width: 0; }
   .pub-title { font-weight: 600; }
   .pub-venue { color: var(--muted); font-style: italic; }
   .me { font-weight: 700; color: var(--text); }
@@ -447,24 +458,43 @@ const SITE = {
     }
   });
 
-  // News
-  makeSection("news", "News", w => SITE.news.forEach(n => {
-    const row = $("div", "news-item");
-    row.appendChild($("div", "date", esc(n.date)));
-    row.appendChild($("div", null, esc(n.text)));
-    w.appendChild(row);
-  }));
+  // News — show the first few; a "Show more" button reveals the rest.
+  makeSection("news", "News", w => {
+    const LIMIT = 3;   // ← how many news items to show before "Show more"
+    SITE.news.forEach((n, i) => {
+      const row = $("div", "news-item" + (i >= LIMIT ? " news-extra" : ""));
+      row.appendChild($("div", "date", esc(n.date)));
+      row.appendChild($("div", null, md(n.text)));
+      w.appendChild(row);
+    });
+    if (SITE.news.length > LIMIT) {
+      const btn = $("button", "more-btn", "Show more ↓");
+      let open = false;
+      btn.addEventListener("click", () => {
+        open = !open;
+        w.querySelectorAll(".news-extra").forEach(e => e.style.display = open ? "flex" : "");
+        btn.innerHTML = open ? "Show less ↑" : "Show more ↓";
+      });
+      w.appendChild(btn);
+    }
+  });
 
   // Selected Publications & Patents (combined)
   makeSection("publications", "Selected Publications & Patents", w => {
     const ol = $("ol", "pubs");
     SITE.publications.forEach(p => {
       const li = $("li");
-      // optional figure (whole image shown; if the file is missing it's hidden)
+      const body = $("div", "pub-body");
+      const t = p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${md(p.title)}</a>` : md(p.title);
+      const roleTag = p.role ? `<br><span class="pub-role">${esc(p.role)}</span>` : "";
+      body.innerHTML = `<span class="pub-title">${t}</span><br>${md(p.authors)}<br><span class="pub-venue">${md(p.venue)} · ${esc(p.year)}</span>${roleTag}`;
+      li.appendChild(body);
+      // optional figure, shown BELOW the citation (whole image; hidden if missing)
       if (p.figure) {
         const fig = $("div", "pub-fig");
         const im = new Image();
         im.src = p.figure; im.alt = p.title; im.loading = "lazy";
+        im.style.width = (p.figw || 640) + "px";   // tuned so text matches across figures
         im.onerror = () => fig.remove();
         if (p.link) {
           const a = $("a"); a.href = p.link; a.target = "_blank"; a.rel = "noopener";
@@ -472,11 +502,6 @@ const SITE = {
         } else { fig.appendChild(im); }
         li.appendChild(fig);
       }
-      const body = $("div", "pub-body");
-      const t = p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${md(p.title)}</a>` : md(p.title);
-      const roleTag = p.role ? `<br><span class="pub-role">${esc(p.role)}</span>` : "";
-      body.innerHTML = `<span class="pub-title">${t}</span><br>${md(p.authors)}<br><span class="pub-venue">${md(p.venue)} · ${esc(p.year)}</span>${roleTag}`;
-      li.appendChild(body);
       ol.appendChild(li);
     });
     w.appendChild(ol);

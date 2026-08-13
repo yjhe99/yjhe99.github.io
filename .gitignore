@@ -9,6 +9,10 @@ cv.pdf
 # 14 MB original photo (profile.jpg is the web version)
 profile_original.jpg
 
+# original figure sources (TIFF) — the .png versions are what the site uses
+*.tif
+*.tiff
+
 # local backup of the site
 backup.html
 
