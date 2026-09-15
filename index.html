@@ -58,7 +58,8 @@ const SITE = {
 
   // ---- News / updates (newest first). Set to [] to hide the section. --
   news: [
-    { date: "Aug 2026", text: "I will serve as a TA for BME 311: Network Analysis this fall." },
+    { date: "Sep 2026", text: "I gave a talk on \"Rapidly reprogramming DNA aptamers as SARS-CoV-2 evolves\" at the BioTACOS meeting." },
+    { date: "Sep 2026", text: "I won this year's BME T-shirt design competition. It's a joy to see everyone in the department wearing my design!" },
     { date: "Aug 2026", text: "My first-authored paper \"A high-throughput platform for rapid adaptation of DNA aptamers to SARS-CoV-2 evolution\" was accepted by _ACS Nano_." },
     { date: "June 2026", text: "I received the Harry and Rubye Gaston Graduate Scholarship from the Cockrell School of Engineering, University of Texas at Austin." },
     { date: "May 2026", text: "My co-authored paper \"Fluorogenic aptamer optimization on a massively parallel sequencing platform\" was published in _ACS Sensors_." },
@@ -107,6 +108,7 @@ const SITE = {
   // ---- Presentations (newest first). type: "talk" or "poster" --------
   //      (they're split into Talks and Posters subsections automatically).
   presentations: [
+    { type: "talk",   title: "Rapidly Reprogramming DNA Aptamers as SARS-CoV-2 Evolves", venue: "Biology Talks About Organisms and Systems (BioTACOS), Austin, TX", year: "Sep 2026" },
     { type: "talk",   title: "High-Throughput Engineering of SARS-CoV-2 Aptamers for Adaptation to Rapid Viral Evolution", venue: "Pittcon Conference + Expo, San Antonio, TX", year: "Mar 2026" },
     { type: "poster", title: "High-throughput Screening of RNA Fluorogenic Aptamers with Distinct Fluorescence Lifetimes", venue: "Gordon Research Conference (NNO), Newport, RI", year: "Jul 2025" },
     { type: "poster",   title: "Aptamer Screening against Viral Variants on a Massively Parallel Sequencing Platform", venue: "Pittcon Conference + Expo, Boston, MA", year: "Mar 2025" },
@@ -117,6 +119,8 @@ const SITE = {
 
   // ---- Teaching -------------------------------------------------------
   teaching: [
+    { role: "Teaching Assistant — BME311: Network Analysis", org: "UT Austin", dates: "Fall 2026",
+      note: "Circuits" },
     { role: "Teaching Assistant — BME214L:Computational Fundamentals of BME Design", org: "UT Austin", dates: "Fall 2025",
       note: "Led labs on 3D modeling, flow simulation, and circuits/PCB design." },
     { role: "Guest Lecturer — BME354/382: Molecular Sensors and Nanodevices", org: "UT Austin", dates: "Nov 2024",
@@ -147,19 +151,27 @@ const SITE = {
     { year: "2018–2019", text: "First-class Scholarship, Zhejiang University, China" }
   ],
 
-  // ---- Life (a separate page — NOT shown on the main page; it appears
-  //      only when someone clicks "Life" in the top menu). Edit freely.
-  //      Set life to null  ( life: null,)  to remove the page & menu link.
-  life: {
-    intro: "A little about me beyond the lab.",
-    paragraphs: [
-      "Coming soon.",
-      "And coming soon."
-    ],
-    // Optional photos. Put images in the "figures" folder and list them here,
-    // e.g. "figures/life1.jpg". They show in a grid, each fully visible.
-    photos: []
-  }
+  // ---- Gallery (a separate "Gallery" page — shown only when the Gallery
+  //      menu link is clicked). Each item is a card: a media slider on the
+  //      LEFT and a title + short paragraph + links on the RIGHT.
+  //      Set gallery to []  to remove the page & menu link.
+  //   media: list of files (in this folder, or "figures/..."). A .mp4/.webm/
+  //          .mov file becomes a playable video; anything else shows as a
+  //          photo. Add more files and the left side becomes a slider.
+  //   links: any of github / linkedin / tool  ("" hides that icon).
+  gallery: [
+    {
+      title: "AptaRender",
+      date: "Sep 2026",
+      text: "A browser-based tool I built (with Claude) to draw publication-ready 2D secondary structures of DNA/RNA. Paste a sequence and its dot-bracket structure to get a fully editable layout, with per-base and per-pair coloring, adjustable fonts, structure rotation with upright text, and clean SVG/PNG export. Still in development, and feedback is very welcome!",
+      media: ["aptarender.mp4"],
+      links: {
+        github:   "https://github.com/yjhe99/aptarender",
+        linkedin: "https://www.linkedin.com/posts/yujie-he-902168248_dna-rna-aptamers-activity-7503644522082537473-g93B",
+        tool:     "https://yjhe99.github.io/aptarender/"
+      }
+    }
+  ]
 };
 </script>
 <!-- =============  END OF CONTENT  —  styling & code below  ============ -->
@@ -240,10 +252,9 @@ const SITE = {
 
   .item { margin-bottom: 22px; }
   .item:last-child { margin-bottom: 0; }
-  .row { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
-  .row .title { font-weight: 600; }
-  .row .when { color: var(--muted); font-size: 14px; white-space: nowrap; }
-  .sub { color: var(--muted); font-size: 15px; }
+  .title { font-weight: 600; }
+  .when { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .sub { color: var(--muted); font-size: 15px; margin-top: 2px; }
   .note { font-size: 15px; margin-top: 4px; }
 
   /* ---- News ---- */
@@ -309,6 +320,8 @@ const SITE = {
     font-family: var(--serif); font-weight: 600; font-size: 17px; color: var(--text);
     margin: 26px 0 14px; padding-top: 14px; border-top: 1px solid var(--line);
   }
+  /* first sub-heading right under a section title: no doubled-up divider line */
+  h2 + .subhead { border-top: 0; padding-top: 0; margin-top: 10px; }
 
   /* ---- Research-interest bullets (About) ---- */
   ul.interests { margin: 6px 0 0; padding-left: 20px; }
@@ -321,15 +334,34 @@ const SITE = {
   .mentee-name { font-weight: 600; }
   .mentee-meta { color: var(--muted); font-size: 15px; }
 
-  /* ---- Active nav link + Life link ---- */
+  /* ---- Active nav link ---- */
   nav a.active { color: var(--accent); font-weight: 600; }
-  nav a.nav-life { margin-left: auto; }
 
-  /* ---- Standalone pages (Presentations, Teaching & Mentoring, Life) ---- */
+  /* ---- Standalone pages (Presentations, Teaching & Mentoring, Gallery) ---- */
   .page > .wrap, .page section { padding-top: 8px; }
-  .life-intro { font-size: 18px; }
-  .life-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
-  .life-grid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; }
+
+  /* ---- Gallery (media slider left, text right) ---- */
+  .gallery-item { display: flex; gap: 28px; align-items: center; margin: 4px 0 44px; flex-wrap: wrap; }
+  .gallery-item:last-child { margin-bottom: 0; }
+  .gal-media { flex: 1 1 340px; min-width: 0; position: relative; }
+  .gal-stage { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+  .gal-stage img, .gal-stage video { display: block; width: 100%; height: auto; }
+  .gal-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line);
+    background: var(--surface); color: var(--accent); font-size: 20px; line-height: 1;
+    cursor: pointer; display: grid; place-items: center; opacity: .92;
+  }
+  .gal-nav:hover { border-color: var(--accent); }
+  .gal-prev { left: 8px; }
+  .gal-next { right: 8px; }
+  .gal-dots { display: flex; gap: 6px; justify-content: center; margin-top: 10px; }
+  .gal-dot { width: 7px; height: 7px; padding: 0; border: none; border-radius: 50%; background: var(--line); cursor: pointer; }
+  .gal-dot.active { background: var(--accent); }
+  .gal-body { flex: 1 1 250px; min-width: 0; }
+  .gal-date { color: var(--accent); font-size: 13px; font-weight: 600; }
+  .gal-title { font-family: var(--serif); font-size: 21px; font-weight: 600; margin: 3px 0 8px; }
+  .gal-text { margin: 0; }
 
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 56px 0 40px; }
 
@@ -399,7 +431,9 @@ const SITE = {
     scholar:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 8l11 6 9-4.9V16h2V8L12 2Z"/><path fill="currentColor" d="M6 12.4v3.1c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.1l-6 3.3-6-3.3Z"/></svg>',
     linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>',
     github:   '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>',
-    cv:       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v16H6V2Zm7 1.5V7h3.5L13 3.5ZM8 11h8v1.5H8V11Zm0 3h8v1.5H8V14Zm0 3h5v1.5H8V17Z"/></svg>'
+    cv:       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v16H6V2Zm7 1.5V7h3.5L13 3.5ZM8 11h8v1.5H8V11Zm0 3h8v1.5H8V14Zm0 3h5v1.5H8V17Z"/></svg>',
+    website:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18M3.5 9h17M3.5 15h17"/></svg>',
+    tool:     '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8L7 10Z"/></svg>'
   };
   const L = SITE.links, contact = $("div", "contact");
   const linkDefs = [
@@ -527,10 +561,8 @@ const SITE = {
       w.appendChild($("div", "subhead", label));
       items.forEach(p => {
         const d = $("div", "item");
-        const row = $("div", "row");
-        row.appendChild($("div", "title", esc(p.title)));
-        row.appendChild($("div", "when", esc(p.year)));
-        d.appendChild(row);
+        d.appendChild($("div", "title", esc(p.title)));
+        d.appendChild($("div", "when", esc(p.year)));
         d.appendChild($("div", "sub", esc(p.venue)));
         w.appendChild(d);
       });
@@ -541,10 +573,8 @@ const SITE = {
   makeSection("teaching", "Teaching & Mentoring", w => {
     SITE.teaching.forEach(t => {
       const d = $("div", "item");
-      const row = $("div", "row");
-      row.appendChild($("div", "title", esc(t.role)));
-      row.appendChild($("div", "when", esc(t.dates)));
-      d.appendChild(row);
+      d.appendChild($("div", "title", esc(t.role)));
+      d.appendChild($("div", "when", esc(t.dates)));
       d.appendChild($("div", "sub", esc(t.org)));
       if (t.note) d.appendChild($("div", "note", esc(t.note)));
       w.appendChild(d);
@@ -575,37 +605,89 @@ const SITE = {
     w.appendChild(ul);
   });
 
-  // ---------- Life page (hidden until the "Life" menu link is clicked) ----------
-  let lifeView = null;
-  if (SITE.life) {
-    lifeView = $("div", "page"); lifeView.id = "life"; lifeView.style.display = "none";
-    const lw = $("div", "wrap");
-    lw.appendChild($("h2", null, "Life"));
-    if (SITE.life.intro) lw.appendChild($("p", "life-intro", md(SITE.life.intro)));
-    (SITE.life.paragraphs || []).forEach(p => lw.appendChild($("p", null, md(p))));
-    const photos = SITE.life.photos || [];
-    if (photos.length) {
-      const grid = $("div", "life-grid");
-      photos.forEach(src => {
-        const im = new Image(); im.src = src; im.alt = ""; im.loading = "lazy";
-        im.onerror = () => im.remove();
-        grid.appendChild(im);
+  // ---------- Gallery page (hidden until the "Gallery" menu link is clicked) ----------
+  let galleryView = null;
+  if (SITE.gallery && SITE.gallery.length) {
+    galleryView = $("div", "page"); galleryView.id = "gallery"; galleryView.style.display = "none";
+    const gw = $("div", "wrap");
+    gw.appendChild($("h2", null, "Gallery"));
+
+    SITE.gallery.forEach(item => {
+      const row = $("div", "gallery-item");
+
+      // LEFT — media slider (photos and/or a playable video)
+      const media = $("div", "gal-media");
+      const stage = $("div", "gal-stage");
+      media.appendChild(stage);
+      const files = item.media || [];
+      const dots = $("div", "gal-dots");
+      const isVideo = s => /\.(mp4|webm|mov|m4v|ogg)$/i.test(s);
+      let idx = 0;
+      const show = i => {
+        idx = (i + files.length) % files.length;
+        stage.innerHTML = "";
+        const src = files[idx];
+        if (isVideo(src)) {
+          const v = document.createElement("video");
+          v.src = src; v.controls = true; v.preload = "metadata"; v.playsInline = true;
+          stage.appendChild(v);
+        } else {
+          const im = new Image(); im.src = src; im.alt = item.title || ""; im.loading = "lazy";
+          stage.appendChild(im);
+        }
+        dots.querySelectorAll("button").forEach((d, di) => d.classList.toggle("active", di === idx));
+      };
+      if (files.length) show(0);
+      if (files.length > 1) {
+        const prev = $("button", "gal-nav gal-prev", "‹"); prev.setAttribute("aria-label", "Previous");
+        const next = $("button", "gal-nav gal-next", "›"); next.setAttribute("aria-label", "Next");
+        prev.onclick = () => show(idx - 1); next.onclick = () => show(idx + 1);
+        media.appendChild(prev); media.appendChild(next);
+        files.forEach((_, di) => {
+          const d = $("button", "gal-dot" + (di === 0 ? " active" : ""));
+          d.setAttribute("aria-label", "Slide " + (di + 1));
+          d.onclick = () => show(di);
+          dots.appendChild(d);
+        });
+        media.appendChild(dots);
+      }
+      row.appendChild(media);
+
+      // RIGHT — title, date, paragraph, links
+      const body = $("div", "gal-body");
+      if (item.date)  body.appendChild($("div", "gal-date", esc(item.date)));
+      if (item.title) body.appendChild($("div", "gal-title", esc(item.title)));
+      if (item.text)  body.appendChild($("p", "gal-text", md(item.text)));
+      const gl = item.links || {};
+      const links = $("div", "contact gal-links");
+      [["github", "GitHub"], ["linkedin", "LinkedIn"], ["tool", "Try the tool"]].forEach(([k, label]) => {
+        if (!gl[k]) return;
+        const a = $("a", null, ICONS[k] || esc(label));
+        a.href = gl[k]; a.target = "_blank"; a.rel = "noopener";
+        a.title = label; a.setAttribute("aria-label", label);
+        links.appendChild(a);
       });
-      lw.appendChild(grid);
-    }
-    lifeView.appendChild(lw);
-    app.appendChild(lifeView);
-    pages.set("life", lifeView);
+      if (links.children.length) body.appendChild(links);
+      row.appendChild(body);
+
+      gw.appendChild(row);
+    });
+
+    galleryView.appendChild(gw);
+    app.appendChild(galleryView);
+    pages.set("gallery", galleryView);
   }
 
   // ---------- fill nav ----------
   // Home sections scroll in place; standalone pages (in `pages`) swap the view.
+  // Short menu labels (headings stay full) so the top bar fits on one row.
+  const NAV_LABELS = { publications: "Publications", teaching: "Teaching", awards: "Awards" };
   sections.forEach(s => {
-    const a = $("a", null, esc(s.label)); a.href = "#" + s.id;
+    const a = $("a", null, esc(NAV_LABELS[s.id] || s.label)); a.href = "#" + s.id;
     navWrap.appendChild(a);
   });
-  if (lifeView) {
-    const a = $("a", "nav-life", "Life"); a.href = "#life";
+  if (galleryView) {
+    const a = $("a", null, "Gallery"); a.href = "#gallery";
     navWrap.appendChild(a);
   }
 
