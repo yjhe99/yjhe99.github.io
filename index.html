@@ -44,9 +44,9 @@ const SITE = {
 
   // ---- About (each string is its own paragraph) -----------------------
   about: [
-    "I am a Ph.D. candidate in Biomedical Engineering and a concurrent M.S. student in Statistics at the University of Texas at Austin, working with [Dr. Tim Yeh](https://sites.utexas.edu/yeh/). I build data-driven pipelines that turn next-generation sequencing into a high-throughput screening pipeline for functional nucleic acids.",
-    "My work sits at the interface of wet-lab biochemistry and computation: I performed high-throughput apatamer screening on repurposed [_Illumina_](https://www.illumina.com) flow cells as well as conventional SELEX to generate the data, and I build the analysis around them. I also integrate molecular dynamics (MD) simulations into the analysis to further explain the sequence–structure–function relationships. Currently, I am working on empowering the current repurposed NGS platform with AI for aptamer engineering.",
-    "Earlier, I built Monte Carlo and ODE-based models for diffusion analysis (for the iGEM project), identified lodging rice from UAV images through machine learning methods, and developed flexible electrochemical sensors (advised by [Dr. Xishan Guo](https://person.zju.edu.cn/en/xishanguo/0.html)) during my B.E. at Zhejiang University, China."
+    "I'm a Biomedical Engineering Ph.D. candidate (with a concurrent M.S. in Statistics) at the University of Texas at Austin, working with [Dr. Tim Yeh](https://sites.utexas.edu/yeh/). I turn next-generation sequencing ([_Illumina_](https://www.illumina.com)) into a high-throughput screening engine for functional DNA/RNA, and build the computation that makes sense of what it produces.",
+    "In practice: I run the wet-lab selections (SELEX and on-chip screening with repurposed NGS chips), then pair the results with molecular dynamics simulations and machine learning to connect sequence, structure, and function. Lately I've been bringing AI into the platform itself for aptamer engineering.",
+    "I also just like building things: a figure tool, the occasional department T-shirt. A few of them live in the [Gallery](#gallery)."
   ],
 
   // ---- Research interests (shown as bullets in About). Edit these. -----
@@ -419,7 +419,8 @@ const SITE = {
     let out = "", last = 0, re = /\[(.+?)\]\((.+?)\)/g, m;
     while ((m = re.exec(s))) {
       out += inline(s.slice(last, m.index));
-      out += '<a href="' + m[2] + '" target="_blank" rel="noopener">' + inline(m[1]) + '</a>';
+      const ext = m[2].charAt(0) !== "#";   // "#..." links stay in the same tab
+      out += '<a href="' + m[2] + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + '>' + inline(m[1]) + '</a>';
       last = m.index + m[0].length;
     }
     return out + inline(s.slice(last));
