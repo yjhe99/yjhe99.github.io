@@ -6,8 +6,9 @@
 # CV — currently unlinked; delete this line to publish it
 cv.pdf
 
-# 14 MB original photo (profile.jpg is the web version)
+# full-resolution photo originals (web-optimized versions are what the site uses)
 profile_original.jpg
+figures/gallery/ts0_original.jpeg
 
 # original figure sources (TIFF) — the .png versions are what the site uses
 *.tif
